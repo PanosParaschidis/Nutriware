@@ -1,0 +1,219 @@
+
+a.menuButton{
+    font-size: 19px;
+}
+
+#dateb{
+    margin-top: 100px;
+}
+
+
+
+.choices{
+    font-size: 18px;
+    font-family: Berlin Sans Fb; 
+
+}
+
+li.a{
+    margin-bottom: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#grad1,#grad2{
+            background: #373737; /* For browsers that do not support gradients */
+            color: #F4F4F4;
+          
+        }
+        #wel{
+            padding-left: 0px;
+        }
+html {
+  position: relative;
+  min-height: 100%;
+
+}
+
+.footer {
+    background: #373737; /* For browsers that do not support gradients */
+            color: #F4F4F4;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 80px;
+  margin-left:-15px;
+  
+}
+    
+    body{
+
+        margin-bottom: 100px;
+            background: #F4F4F4;
+            color: #373737;
+        }
+          .nav-pills > li.active > a,
+        .nav-pills > li.active > a:hover,
+        .nav-pills > li.active > a:focus {
+          color: #F4F4F4;
+          background-color: #C0B283;
+        }
+        .nav-pills > li> a {
+          color: #F4F4F4;
+      
+        }
+         .nav-pills > li> a:hover,
+         .nav-pills > li> a:focus{
+             background-color: #C0B283;
+         }
+
+
+
+
+
+         @media only screen and (max-width: 768px){
+             #toggleb{
+                 display: block;
+                 font-size: 10px;
+                 width: 40px;
+             }
+         }         
+         @media only screen and (min-width: 768px){
+             #toggleb{
+                 display: none;
+             }
+         }
+         
+/*πλαινό μενου*/
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #373737; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #F4F4F4;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #C0B283;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+h2{
+   font-family: Berlin Sans Fb; 
+   padding-left: 200px; 
+   font-weight:normal;
+}
+
+h3{
+    font-family: Berlin Sans Fb; 
+     font-weight:normal;
+}
+
+h4{
+        font-family: Berlin Sans Fb; 
+     font-weight:normal;
+     padding: 0px;
+     margin: 0px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width:767px){
+    h2{
+ 
+    padding-left: 0px; 
+    }
+    #grad2{
+        margin-right:-130px;
+    }
+    #b1{
+        margin-left:15px;
+    }
+    #delete{
+     margin-left: -15px;
+}
+}
+
+@media screen and (min-width:768px) and (max-width:1023px){
+    h2{
+
+    padding-left: 30px; 
+    }
+    #topmenu{
+       margin-right: -20px; 
+    }
+    #choicemenu1{
+        display:none;
+}
+  #delete{
+     margin-left: -10px;
+}
+    
+}
+
+@media screen and (width:1024px){
+     h2{
+
+    padding-left: 60px; 
+    }
+        #choicemenu1{
+        display:none;
+}
+#delete{
+     margin-left: -10px;
+}
+}
+
+
+@media screen and (min-width:1024px){
+#comH,#comP{
+    padding-left: 130px;
+}
+#pb1{
+     margin-left: 200px;
+}
+#calendar{
+    padding-left: 300px;
+    padding-right:300px;
+    padding-bottom: 300px;
+    
+}
+    #choicemenu1{
+        display:none;
+}
+#delete{
+     margin-left: -10px;
+}
+}

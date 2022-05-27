@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+          <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+       
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css">
+        
+        <link rel="stylesheet" href="mycss.css" type="text/css"/>
+
+         <script type="text/javascript"  src="myjavascript.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <script type="text/javascript"  src="bootstrap/js/bootstrap.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nutriware</title>
+ 
+
+    
+    </head>
+    <body>
+        <div class="container-fluid" id="grad2">
+      <nav class="navbar navbar-default" style="background-color:inherit; border:none; ">
+        <div class="container-fluid" >
+          <div class="navbar-header">
+              
+              <h1 class="pull-left" style="font-family: Berlin Sans Fb; font-size: 50px; color: #F4F4F4 ">Nutriware</h1>
+          </div>
+          
+       
+           
+             <div class="navbar-collapse collapse" >
+                  <ul class="nav nav-pills navbar-right" id="topmenu">
+                <li><a href="profile.php">Προφίλ</a></li>
+                <li><a href="comm.php">Επικοινωνία</a></li>
+                <li><a href="faq.php">Συχνές Ερωτήσεις</a></li>
+                <li><a href="signout.php">Αποσύνδεση</a></li>
+            </ul>      
+          </div>
+            
+            
+             <ul class="nav nav-pills navbar-right" id="choicemenu">
+                 <li><a href="#" class='menuButton' onclick="openNav()">Μενού</a> </li>
+             </ul>
+          
+        </div>
+      </nav>
+     </div>
+        <div id="bread" class="pull-left">
+            <ol class="breadcrumb">
+            <li><a href="profile.php">Αρχική</a></li>
+            <li><a href="profile.php">Σύνδεση</a></li>
+            <li><a href="clients.php">Οι πελάτες μου</a></li>
+            <li class="active">Υπολογισμός Ισοδυνάμων</li>        
+          </ol>
+        </div>
+   
+        
+        <div class="container" >
+            <br><br>
+            <h2 >Υπολογισμός Ισοδυνάμων</h2>
+            <div id="table1" > 
+                <table  class="table-bordered table-striped ">
+        <tr>
+                <th> </th>
+                <th>Ισοδύναμα &emsp;&emsp;&emsp;</th>
+                <th>Υδατάνθρακες &emsp;&emsp;&emsp;</th>
+                <th>Πρωτεϊνες &emsp;&emsp;&emsp;</th>
+                <th>Λίπη &emsp;&emsp;&emsp;</th>
+                <th>Kcal &emsp;&emsp;&emsp;</th>
+        </tr>
+        <tr>
+            <td>
+                <label for='dairy'>Γαλακτοκομικά:</label>
+            </td>
+            <td>
+                <input id='dairy' type='text' name='dairy' size='3' onchange="dairy(this.value); total();">
+            </td>
+            <td id="td1"></td>
+            <td id="td2"></td>
+            <td id="td3"></td>
+            <td id="td4"></td>
+        </tr>
+        <tr>
+            <td>
+                <label for='veg'>Λαχανικά:</label>
+            </td>
+            <td>
+                <input id='veg' type='text' name='veg' size='3' onchange="veg(this.value); total();">
+            </td>
+            <td id="td5"></td>
+            <td id="td6"></td>
+            <td id="td7"></td>
+            <td id="td8"></td>
+        </tr>
+        <tr>
+            <td>
+                <label for='cereal'>Δημητριακά:</label>
+            </td>
+            <td>
+                <input id='cereal' type='text' name='cereal' size='3' onchange="cereal(this.value);total();">
+            </td>
+            <td id="td9"></td>
+            <td id="td10"></td>
+            <td id="td11"></td>
+            <td id="td12"></td>
+        </tr>
+        <tr>
+            <td>
+                <label for='fruits'>Φρούτα:</label>
+            </td>
+            <td>
+                <input id='fruits' type='text' name='fruits' size='3' onchange="fruits(this.value);total();">
+            </td>
+            <td id="td13"></td>
+            <td id="td14"></td>
+            <td id="td15"></td>
+            <td id="td16"></td>
+        </tr>
+        <tr>
+            <td>
+                <label for='meat1'>Κρέας 1:</label>
+            </td>
+            <td>
+                <input id='meat1' type='text' name='meat1' size='3' onchange="meat1(this.value);total();">
+            </td>
+            <td id="td17"></td>
+            <td id="td18"></td>
+            <td id="td19"></td>
+            <td id="td20"></td>
+        </tr>    
+         <tr>
+            <td>
+                <label for='meat2'>Κρέας 2:</label>
+            </td>
+            <td>
+                <input id='meat2' type='text' name='meat2' size='3' onchange=meat2(this.value);>
+            </td>
+            <td id="td21"></td>
+            <td id="td22"></td>
+            <td id="td23"></td>
+            <td id="td24"></td>
+         </tr>
+         <tr>
+            <td>
+                <label for='meat3'>Κρέας 3:</label>
+            </td>
+            <td>
+                <input id='meat3' type='text' name='meat3' size='3' onchange="meat3(this.value);total();">
+            </td>
+            <td id="td25"></td>
+            <td id="td26"></td>
+            <td id="td27"></td>
+            <td id="td28"></td>
+         </tr>
+         <tr>
+            <td>
+                <label for='meat4'>Κρέας 4:</label>
+            </td>
+            <td>
+                <input id='meat4' type='text' name='meat4' size='3' onchange="meat4(this.value);total();">
+            </td>
+            <td id="td29"></td>
+            <td id="td30"></td>
+            <td id="td31"></td>
+            <td id="td32"></td>
+         </tr>
+        <tr>
+            <td>
+                <label for='fats'>Λίπη:</label>
+            </td>
+            <td>
+                <input id='fats' type='text' name='fats' size='3' onchange="fats(this.value);total()">
+            </td>
+            <td id="td33"></td>
+            <td id="td34"></td>
+            <td id="td35"></td>
+            <td id="td36"></td>
+        </tr>  
+        <tr>
+            <td><b>Σύνολο:</b></td>
+            <td id="td37"></td>
+            <td id="td38"></td>
+            <td id="td39"></td>
+            <td id="td40"></td>
+            <td id="td41"></td>
+        </tr>
+        </table>
+            </div>
+        </div>
+        
+        
+ <!--hidden sidebar -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="clients.php">Οι πελάτες μου</a>
+                <a href="newclient.html">Νέος Πελάτης</a>  <hr>
+                <a href="newdiet.php">Σχεδιασμός Διαιτολογίου</a>
+                <a href="equals.html">Υπολογισμός Ισοδυνάμων</a>
+                 <a href="tables.php">Πίνακες Σύστασης Τροφίμων</a>  <hr>
+                  <a href="appointment.php">Νέο Ραντεβού</a>
+                  <a href="calendar.php">Ημερολόγιο</a>
+              </div>
+ 
+       
+            <div id="mySidenav1" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="profile.php">Προφίλ</a> <hr>
+  <a href="clients.php">Οι πελάτες μου</a>
+  <a href="newclient.html">Νέος Πελάτης</a>  <hr>
+  <a href="newdiet.php">Σχεδιασμός Διαιτολογίου</a>
+  <a href="equals.html">Υπολογισμός Ισοδυνάμων</a>
+   <a href="tables.php">Πίνακες Σύστασης Τροφίμων</a> <hr>
+    <a href="appointment.php">Νέο Ραντεβού</a>
+    <a href="calendar.php">Ημερολόγιο</a> <hr>
+      <a href="comm.php">Επικοινωνία</a>
+      <a href="faq.php">Συχνές Ερωτήσεις</a>
+      <a href="signout.php">Αποσύνδεση</a>
+    
+</div>
+
+ <div class="navbar-collapse collapse" >
+  <footer class="footer" id="footer">
+      
+            <div class="pull-left" style="margin-left:5px;">
+            <h6>Developed by Paraschidis Panagiotis</h6>
+            <h6>for his undergraduate thesis</h6>
+            <h6>2016-2017</h6>    
+         </div>  
+        
+          <div class="pull-right">
+              <img src="images/uoc.jpg" alt="Uoc Logo">
+          </div>
+          <div class="pull-right" style="margin-right:5px;">
+              <h6>Computer Science Department</h6> 
+              <h6>University Of Crete</h6>
+          </div> 
+  </footer>
+   </div>
+	 
+    
+    </body>
+</html>
